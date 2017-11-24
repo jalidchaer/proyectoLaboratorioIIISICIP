@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CDCHT-UCLA </title>
+  
+  <!-- core CSS -->
+   
+ 
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.iso.css" rel="stylesheet">
+  <link href="css/bootstrap.switch.min.css" rel="stylesheet">
+  <link href="css/bootstrap.theme.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+   <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    
+     <!--<link href="css/estilo.css" rel="stylesheet">>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    
+  <link rel="SHORTCUT ICON" type="image/x-icon" href="images/logoucla.ico"> 
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- Incluya los javascripts y css del framework Extjs 6.0 Desktop o Mobile -->
+  <!-- http://docs.sencha.com/extjs/6.0/index.html -->
+  <!-- Comparacion de Sencha con otras: http://tiny.cc/ibeo1x -->
+    
+  <!-- Ir a: http://tiny.cc/eb2o1x para ver Classic vs Modern -->
+  <!-- Classic-Sencha-Desktop - Extjs 5 para Desktop, Tablets y Laptos Tactil -->
+  <!-- Ver Apis: http://docs.sencha.com/extjs/6.0/6.0.0-classic/-->
+  <script type="text/javascript" src="/js/ext/build/ext-all.js">
+
+  <!-- Modern-Sencha Touch - Html5 Universal para Browsers Desktop y Mobile  -->
+  <!-- Guia: http://docs.sencha.com/extjs/6.0/whats_new/6.0.0/modern_upgrade_guide.html -->
+  <!-- Ver Apis: http://docs.sencha.com/extjs/6.0/6.0.0-modern/-->
+  <!-- script type="text/javascript" src="js/ext/build/ext-modern-all.js"  -->
+  
+  <!-- Tema Trinton - Sencha - Desktop -->
+  <script type="text/javascript" src="js/ext/build/classic/theme-triton/theme-triton.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/ext/build/classic/theme-triton/resources/theme-triton-all.css">
+
+
+
+
+<script type="text/javascript">
+  var rol = <%= @rol %>;
+</script>
+
+  <script> 
+     //Escoger el idioma para los mensajes emergentes
+     var s = document.createElement("script");
+     s.type = 'text/javascript';
+     s.src = "js/ext/classic/locale/overrides/es/ext-locale-es.js";
+     s.charset = 'ascii';
+     document.getElementsByTagName("head")[0].appendChild(s);
+  </script>
+
+<header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div >
+
+                        <a class="navbar-brand" href="index.html" id="logo"><img src="images/logo.png" alt="logo"></a>
+                        <div  class="margen">
+                        <a class="navbar-brand" href="index.html" id="logo1"><img src="images/cdcht.png" ></a>
+                    </div>
+                        
+                        <div align="center">
+                        <h2 class="letra">Consejo de Desarrollo Cientifico,Humanístico y tecnológico  </h2>
+                        </div>
+                       
+                         
+                    </div>
+                
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="inicio">Inicio</a></li>
+                        <li><a href="#">Acerca del CDCHT</a></li>
+                    
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Organización <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Misión</a></li>
+                                <li><a href="#">Visión</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="#">Shortcodes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contactos</a></li>
+                                                
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+        
+    </header><!--/header-->
+
+  
+
+    
+</head><!--/head-->
+<br>
+<br>

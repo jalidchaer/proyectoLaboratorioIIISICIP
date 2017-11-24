@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="app/views/registrar_evaluador/css/estilos.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<title>Formularios</title>
+</head>
+<body>
+	<div class="contenedor-formulario">
+		<div class="wrap">
+			<form action="" class="formulario" name="formulario_registro" method="get">
+				<div>
+					<div class="input-group">
+						<input type="text" id="nombre" name="nombre">
+						<label class="label" for="nombre">Nombre:</label>
+					</div>
+					<div class="input-group">
+						<input type="email" id="correo" name="correo">
+						<label class="label" for="correo">Correo:</label>
+					</div>
+					<div class="input-group">
+						<input type="password" id="pass" name="pass">
+						<label class="label" for="pass">Contraseña:</label>
+					</div>
+					<div class="input-group">
+						<input type="password" id="pass2" name="pass2">
+						<label class="label" for="pass2">Repetir Contraseña:</label>
+					</div>
+					<div class="input-group radio">
+						<input type="radio" name="sexo" id="hombre" value="Hombre">
+						<label for="hombre">Hombre</label>
+						<input type="radio" name="sexo" id="mujer" value="Mujer">
+						<label for="mujer">Mujer</label>
+					</div>
+					<div class="input-group checkbox">
+						<input type="checkbox" name="terminos" id="terminos" value="true">
+						<label for="terminos">Acepto los Terminos y Condiciones</label>
+					</div>
+						
+					<input type="submit" id="btn-submit" value="Enviar">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/formulario.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Campsite Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css' rel='stylesheet' type='text/css'>
+  <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.8/css/bootstrap-switch.css' rel='stylesheet' type='text/css'>
+  <link href='http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css' rel='stylesheet' type='text/css'>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.8/js/bootstrap-switch.min.js' type='text/javascript'></script>
+  <script src='http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js' type='text/javascript'></script>
+   
+   <script type="text/javascript" src="js/catalogo.js"></script>
+   <script type="text/javascript" src="js/calendar.js"></script>
+</head>
+
+  
+ 
+
+<body>
+
+
+<%= render partial: "registrar_evaluador/registroevaluador" %>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" ">Registrar <span class="glyphicon glyphicon-user"></span></button>
+
+
+<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+
+   
+
+  <div class='container'>
+
+    <div class='panel panel-primary dialog-panel'>
+      <div class='panel-heading'>
+        <h4 ><center>Registro de Evaluadores</center></h4>
+      </div>
+      <div class='panel-body'>
+        <form class='form-horizontal' role='form' >
+
+
+ 
+  <div class='form-group'>
+          <center><h4></h4></center>
+          
+           
+          </div>
+
+         <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_cedula'>Seleccione el proyecto</label>
+            <div class='col-md-8'>
+             
+              <div class='col-md-2'>
+                <div class='form-group internal'>
+                  <div id="bot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         
+             <div class='form-group'>
+          <center><h4> Datos del proyecto</h4></center>
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_equipment'>Código del proyecto</label>
+            <div class='col-md-8'>
+              <div class='col-md-3'>
+                <div class='form-group internal'>
+                  <input class='form-control col-md-8' id='id_codigo' type='text'>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+          </div>
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Titulo</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <textarea class='form-control' id='id_email' placeholder='Titulo' type='text' size="50x10"></textarea>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Cédula del responsable</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control col-md-8' id='id_cedula' type='text'>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+         
+         <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Nombre del responsable</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control col-md-8' id='id_nombre' type='text'>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_unidad'>Área de investigación</label>
+            <div class='col-md-8'>
+              <div class='col-md-4'>
+                <div class='form-group internal'>
+                  <select class='form-control' id='id_equipment'>
+                    <option>Investigación de Operaciones</optio>
+                    <option>Matemática</option>
+                    <option>Inteligencia artificial</option>
+                    <option>Redes</option>
+                    <option>Estadística</option>
+                    <option>Informática</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_equipment'>Monto total estimado para el proyecto</label>
+            <div class='col-md-8'>
+              <div class='col-md-5'>
+                <div class='form-group internal'>
+                  <input class='form-control col-md-8' id='id_monto'  type='number' width="30px">
+                </div>
+      
+            
+              </div>
+
+              <div class='form-group'>
+            <label class='control-label col-md-2' for='id_categoria'>Categoria</label>
+            <div class='col-md-4'>
+              <div class='col-md-3'>
+                <div class='form-group internal'>
+                  <select class='form-control' id='id_equipment'>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                  </select>
+                </div>
+              </div>
+           
+          </div>
+          </div>
+          </div>
+          </div>
+          
+
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_unidad'>Duracion estimada</label>
+            <div class='col-md-8'>
+              <div class='col-md-2'>
+                <div class='form-group internal'>
+                  <select class='form-control' id='id_equipment'>
+                    <option>1 Año</option>
+                    <option>2 Años</option>
+                    <option>3 Años</option>
+                    <option>4 Años</option>
+                    <option>5 Años</option>
+                   
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_unidad'>Fecha de Inicio del proyecto</label>
+            <div class='col-md-8'>
+              <div id="fechainicio"></div>
+            </div>
+          </div>
+         
+         <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_unidad'>Fecha de prorroga</label>
+            <div class='col-md-8'>
+              <div id="fechafinal"></div>
+            </div>
+          </div>
+         
+
+        
+         
+
+         <div class='form-group'>
+          
+            <div class='col-md-5 col-md-offset-4' >
+              <button type="button" class="btn btn-primary" type='submit'>Guardar <span class="glyphicon glyphicon-floppy-disk"></span></button>
+              <button type="button" class="btn btn-primary" type='submit'>Descargar <span class="glyphicon glyphicon-download-alt"></span></button>
+               <button type="button" class="btn btn-primary" type='submit'>Enviar <span class="glyphicon glyphicon-envelope"></span></button>
+            
+          </div>
+         
+         
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+    
+        <script src="js/index.js"></script>
+
+  
+</html>

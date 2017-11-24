@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" 
+href="css/jquery.dataTables.min.css"></style>
+<script type="text/javascript" 
+src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" 
+src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<p id="notice"><%= notice %></p>
+
+<html>
+<head>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+    <title>Campsite Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+    $(function() {
+    $('#datetimepicker1').datetimepicker({
+      language: 'pt-BR'
+    });
+      });
+   </script>
+   
+
+    <link href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css' rel='stylesheet' type='text/css'>
+  <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.8/css/bootstrap-switch.css' rel='stylesheet' type='text/css'>
+  <link href='http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css' rel='stylesheet' type='text/css'>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.8/js/bootstrap-switch.min.js' type='text/javascript'></script>
+  <script src='http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js' type='text/javascript'></script>
+   
+  <script type="text/javascript" src="js/catalogo.js"></script>
+
+   <!-- STYLE SHEETS PARA LA TABLA  -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+
+  <!-- DEFINICION DE FUNCION PARA TRAER FECHA DE REALIZACION DE ESTATUS -->
+
+</head>
+
+
+<body>
+
+
+<script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+
+<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+
+<div class='form-group'>
+          <!-- <center><h4></h4></center> -->
+<div class='container'>
+
+    <div class='panel panel-primary dialog-panel'>
+      <div class='panel-heading'>
+        <h5 ><center>Consulta de Versiones</center></h5>
+      </div>
+      <div class='panel-body'>
+        <!-- <form class='form-horizontal' role='form' > -->
+
+ <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_cedula'>Seleccione el proyecto:</label>
+            <div class='col-md-8'>
+             
+              <div class='col-md-2'>
+                <div class='form-group internal'>
+                  <div id="bot"></div>
+                </div>
+              </div>
+
+
+              <label class='control-label col-md-2 col-md-offset-2' for='id_cedula'>Codigo proyecto:</label>
+              <div class='col-md-2'>
+                <div class='form-group internal'>
+                <label>6537462681741</label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <br>
+          <div class='col-md-2'>
+                <label>Titulo del proyecto:</label>
+                </div>
+
+              <div class='col-md-2'>
+                <label>Clasificacion ABC</label>
+                </div>
+
+
+
+<!-- TABLA CON VERSIONES -->
+
+<table id="myTable" class="table table-striped" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th><center>Fecha</center></th>
+      <th><center>Codigo de Version</center></th>
+      <th><center>Estatus</center></th>
+      <th><center>Descargar Version</center></th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proyectos.each do |proyecto| %>
+      <tr>
+        <td><%= proyecto.fecha %></td>
+        <td><%= proyecto.codigo %></td>
+        <td><%= proyecto.estado %></td>
+        <td><%= link_to '', proyecto , class: "glyphicon glyphicon-download-alt" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'New Proyecto', new_proyecto_path %>
+ <button type="button" class="btn btn-primary" onclick="window.location.href='inicio'">
+     Volver al inicio <span  class="glyphicon glyphicon-circle-arrow-left" ></span> 
+    </button>
+
+<script>
+$(document).ready(function() {
+    $('#myTable').DataTable();
+} );
+
+$(document).ready(function() {
+    var table = $('#myTable').DataTable();
+ 
+    $('#myTable tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

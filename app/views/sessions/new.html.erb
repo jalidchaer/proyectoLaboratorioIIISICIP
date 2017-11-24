@@ -1,0 +1,153 @@
+
+<script>
+function olvidoClave() {
+    alert("Se ha enviado un link para restablecer su clave a su correo.");
+}
+</script>
+
+ 
+ <div class="col-sm-9">
+ <div class="col-sm-3">
+    
+    <div class="row">
+        <div>
+            <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary"><p class="letra1">Sistemas</p></a>
+            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
+              <li><a href="#" data-toggle="tab">Buscador de proyectos</a></li>
+              <li><a href="#" data-toggle="tab">Sistema peila</a></li>
+              <li><a href="#" data-toggle="tab">Buscador de proyectos LOCTI</a></li>
+            </ul>
+        </div>
+       
+    </div>
+
+     <div class="row">
+        <div>
+            <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary"> <p class="letra1">Documentación </p></a>
+            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
+              <li><a href="#" data-toggle="tab">Circulares</a></li>
+              <li><a href="#" data-toggle="tab">Reglamentos y normas</a></li>
+              <li><a href="#" data-toggle="tab">Planillas</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+</div>
+
+<section id="main-slider" >
+
+   
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+
+<div class="container1">
+    
+    <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+    <div id="wowslider-container1">
+    <div class="ws_images"><ul>
+        <li><img src="data1/images/img1.jpg" alt="img1" title="img1" id="wows1_0"/></li>
+        <li><img src="data1/images/img02.jpg" alt="img02" title="img02" id="wows1_1"/></li>
+        <li><img src="data1/images/img03.jpg" alt="img03" title="img03" id="wows1_2"/></li>
+        <li><img src="data1/images/img04.jpg" alt="img04" title="img04" id="wows1_3"/></li>
+        <li><img src="data1/images/img05.jpg" alt="img05" title="img05" id="wows1_4"/></li>
+        <li><img src="data1/images/img06.jpg" alt="img06" title="img06" id="wows1_5"/></li>
+        <li><a href="http://wowslider.com"><img src="data1/images/img08.jpg" alt="wordpress slider" title="img08" id="wows1_6"/></a></li>
+        <li><img src="data1/images/img07.jpg" alt="img07" title="img07" id="wows1_7"/></li>
+    </ul></div>
+    <div class="ws_bullets"><div>
+        <a href="#" title="img1"><span><img src="data1/tooltips/img1.jpg" alt="img1"/>1</span></a>
+        <a href="#" title="img02"><span><img src="data1/tooltips/img02.jpg" alt="img02"/>2</span></a>
+        <a href="#" title="img03"><span><img src="data1/tooltips/img03.jpg" alt="img03"/>3</span></a>
+        <a href="#" title="img04"><span><img src="data1/tooltips/img04.jpg" alt="img04"/>4</span></a>
+        <a href="#" title="img05"><span><img src="data1/tooltips/img05.jpg" alt="img05"/>5</span></a>
+        <a href="#" title="img06"><span><img src="data1/tooltips/img06.jpg" alt="img06"/>6</span></a>
+        <a href="#" title="img08"><span><img src="data1/tooltips/img08.jpg" alt="img08"/>7</span></a>
+        <a href="#" title="img07"><span><img src="data1/tooltips/img07.jpg" alt="img07"/>8</span></a>
+    </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">jquery image gallery</a> by WOWSlider.com v8.2</div>
+    <div class="ws_shadow"></div>
+    </div>  
+    <script type="text/javascript" src="engine1/wowslider.js"></script>
+    <script type="text/javascript" src="engine1/script.js"></script>
+    <!-- End WOWSlider.com BODY section -->
+    </section><!--/#main-slider-->
+
+        <div class="col-sm-9 col-md-push-3">
+        
+        
+             <div>
+                        <div class="col-sm-6 col-sm-offset-8 form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                <%= form_tag '/login' do %>
+                                    <h3>Entra en nuestro sitio</h3>
+                                    <p>Ingresa tu correo y contraseña para entrar:</p>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <form role="form" action="" method="post" class="login-form">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-username">Correo</label>
+                                        <input class="form-control" id="email" name="correo" type="email" placeholder="Correo..." >
+                                        <!--<input type="text" name="form-username" placeholder="Correo..." class="form-username form-control" id="form-username">-->
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-password">Contraseña</label>
+                                       <!-- <input type="password" name="form-password" placeholder="Contraseña..." class="form-password form-control" id="form-password">-->
+                                       <input class="form-control" id="password" name="password" placeholder="Clave..." type="password">
+                                       
+                                    </div>
+                                    
+				                        <div class='form-group internal'>
+				                          <select class='form-control' id='id_equipment'>
+				                            <option>Investigador</option>
+				                            <option>Evaluadorr</option>
+				                            <option>Coordinador</option>
+				                            <option>CDCHT</option>
+				                            <option>Administrador</option>
+				                            
+				                          </select>
+				                        </div>
+                      				
+                                    <button type="submit" class="btn-primary">Entrar!</button>
+
+                                     <%= link_to 'Registrar', '/signup' %>
+                                     <br>
+										 <%= link_to "(Olvidaste tu clave?)", new_password_reset_path %>
+
+
+
+
+
+
+								<% end %>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        
+      
+  </div>
+                    </div>
+
+
+       
+      
+</div>
+
+
+    
+
+    
+   
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>

@@ -1,0 +1,5 @@
+Hola <%= @usuario.nombre %>,
+
+Bienvenido a CICIP App! Has Click en el link de abajo para activar tu cuenta:
+
+<%= edit_account_activation_url(@usuario.activation_token, correo: @usuario.correo) %>

@@ -1,0 +1,30 @@
+ <%= render partial: "partials/header" %>
+<body>
+<%  @dpdi = User.servidor %>
+<% if current_user %>
+ <%@dpdi.each do |p|%>
+
+  	<%if p["email"] == current_user.correo %>
+  		
+		<% @nombre= p["nombre"] %>
+  		<% @decanato= p["decanato"]%>
+  		<% @departamento= p["departamento"]%> 
+  		 <%@cedula =p["cedula"]%>
+  		 <% @direccion= p["direccion"]%>
+
+
+  	<%end%>
+ <%end%>
+ <%end%>
+
+<% if current_user %>
+<div class='pull-right' ">
+  Ingresado como <%= @nombre%> Nivel de rol: <%= current_user.rol%> | <%= link_to "Salir", '/logout' %>
+  </div>
+<% else %>
+  <%= link_to 'Entrar', '/login' %> | <%= link_to 'Registrar', '/signup' %>
+<% end %>
+<%= yield %>
+
+</body>
+<%= render partial: "partials/bottom" %>

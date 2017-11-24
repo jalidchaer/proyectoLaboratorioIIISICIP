@@ -1,0 +1,205 @@
+
+	
+<% @id_usuario=User.find(session[:user_id]) %>
+<div class="panel panel-primary">
+          <div class='panel-heading'> <center> Datos del proyecto</center></div>
+              <div class="panel-body">
+                <%= form_for :proyecto, :multipart => true, :url=> { :controller => 'proyectos',:action => :create }  do |f| %>
+                <div class="form-group">
+                  <label class='control-label col-md-1' for="usuario">Responsable</label>
+                <div class='col-sm-2'>
+
+                  <%= f.text_field :reponsable  ,class:"form-control",:readonly => true ,placeholder: @id_usuario.nombre,:value => @id_usuario.nombre %>
+    
+             </div>
+             
+                  
+                   
+                     
+                        
+                        <label class='control-label col-md-1' for='id_equipment'>Decanato</label>
+                      
+                        <div class='col-sm-2'>
+                          <div class='form-group internal'>
+                            <select class='form-control' id='id_equipment'>
+                              <option>Ciencias y Tecnologia</option>
+                              <option>Agroindustrial</option>
+                              <option>Medicina</option>
+                              <option>otro1</option>
+                              <option>Produccion</option>
+                              <option>Veterinaria</option>
+                            </select>
+                          </div>
+                        </div>
+
+                      
+                        <label class='control-label col-md-1' for='id_categoria'>Categoria</label>
+                           <div class='col-sm-1'>
+                             
+                                <div class='form-group internal'>
+                                  <select class='form-control' id='id_equipment'>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                  </select>
+                                </div>
+                              
+                   
+                          </div>
+                      
+                   
+                  
+              
+
+                  
+                   
+                    
+                 
+                  
+
+                     <label class="col-sm-1 control-label" for='id_email'>Codigo</label>
+                    <div class="col-sm-2">
+                     
+                        
+                           <%= f.text_field :codigo ,class:"form-control input-md", required:"", placeholder:"Codigo" %> 
+                        </div>
+                     
+                     </div>
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+
+
+                     <div class='form-group'>
+                    
+                    <label class="col-sm-1 control-label" for='id_email'>Titulo</label>
+                     <div class="col-sm-3">
+                     
+                           <%= f.text_area :titulo ,class:"form-control input-md", required:"", placeholder:"Titulo" %> 
+                      
+                     
+                    </div>
+                    <label class="col-sm-1 control-label" for='id_email'>Objetivo General</label>
+                     <div class="col-sm-3">
+                      
+                           <%= f.text_area :objetivogeneral ,class:"form-control input-md", required:"", placeholder:"Objetivo General" %> 
+                       
+                     
+                    </div>
+
+                    
+                    <label class='control-label col-sm-2' for='id_departamento'>Departamentos</label>
+                    
+                      
+                       <div class="col-sm-2">
+                          <select class='form-control' id='id_equipment'>
+                            <option>Investigacion de Operaciones</option>
+                            <option>Matematicas</option>
+                            <option>Departamento1</option>
+                            <option>Departamento2</option>
+                            <option>Departamento3</option>
+                            <option>Departamento4</option>
+                          </select>
+                        </div>
+                      
+                  
+                  </div>
+                  
+               
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                  
+                 
+                 
+                    
+                 
+                  <div class='form-group'>
+                    <label class='control-label col-sm-1' for='id_linea'>Linea de investigacion</label>
+                   
+                     
+                      <div class='col-sm-2'>
+                        <div class='form-group internal'>
+                          <input class='form-control col-md-8' id='id_linea' placeholder='linea' type='text'>
+                        </div>
+                      </div>
+                  
+                    <label class='control-label col-sm-1 ' for='id_unidad'>Unidad de investigacion</label>
+                    
+                      <div class='col-sm-2'>
+                        <div class='form-group internal'>
+                          <select class='form-control' id='id_equipment'>
+                            <option>Investigacion de Operaciones</option>
+                            <option>Matematicas</option>
+                            <option>Departamento1</option>
+                            <option>Departamento2</option>
+                            <option>Departamento3</option>
+                            <option>Departamento4</option>
+                          </select>
+                        </div>
+                      </div>
+                    
+                  
+
+                 
+                    
+                  
+
+
+                  
+                    <label class='control-label col-sm-1' for='id_unidad'>Duracion estimada</label>
+                   
+                      <div class='col-sm-1'>
+                        <div class='form-group internal'>
+                        
+                           <%= f.number_field :duracion ,class:"form-control input-md", required:"" %> 
+                   
+                        </div>
+                      </div>
+
+                       <label class='control-label col-sm-2' for='id_linea'>Monto total estimado para el proyecto</label>
+                    
+                     
+                      <div class='col-sm-2'>
+                        <div class='form-group internal'>
+                          <input class='form-control col-md-8' id='id_linea'  type='number'>
+                        </div>
+                      </div>
+                      </div>
+                    
+                   
+                    
+                  </div>
+                
+    
+
+                          <div class='form-group internal'>
+                            <%= f.file_field :file %>
+                          </div>
+                
+                    
+                  
+                    
+
+                
+           <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+          <i class="glyphicon glyphicon-floppy-disk icon-white"></i> Guardar
+          <% end %>
+           <%= button_tag(type: :reset, class: "btn btn-primary") do %>
+           <i class="glyphicon glyphicon-remove icon-white"></i> Cancelar
+            <% end %>
+          
+           <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModal2">siguiente<span class="glyphicon glyphicon-arrow-right"></span></button>
+       
+</div>
+
+
+
+
+
+
+ <% end %>

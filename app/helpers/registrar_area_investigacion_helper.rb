@@ -1,0 +1,2 @@
+module RegistrarAreaInvestigacionHelper
+end

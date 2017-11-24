@@ -1,0 +1,6 @@
+<script>
+$('<%= j render "listado_proyectos", title: "Proyectos" %>').on('hidden.bs.modal', function (e) {
+  $(this).remove();
+  $('.modal-backdrop').remove();
+}).modal();
+</script>

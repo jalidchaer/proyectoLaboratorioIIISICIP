@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @proyecto.created_at %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @proyecto.codigo %>
+</p>
+
+<p>
+  <strong>Responsable:</strong>
+  <%= @proyecto.responsable %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @proyecto.titulo %>
+</p>
+
+<p>
+  <strong>Objetivogeneral:</strong>
+  <%= @proyecto.objetivogeneral %>
+</p>
+
+<p>
+  <strong>Objetivosespecifo:</strong>
+  <%= @proyecto.objetivosespecifo %>
+</p>
+
+<p>
+  <strong>Resumen:</strong>
+  <%= @proyecto.resumen %>
+</p>
+
+<p>
+  <strong>Duracion:</strong>
+  <%= @proyecto.duracion %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @proyecto.monto %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @proyecto.estado %>
+</p>
+
+<%= link_to 'Edit', edit_proyecto_path(@proyecto) %> 
+<%= link_to 'Mostrar', controller: "proyectos", action: "show"%> |
+|
+<%= link_to 'Volver', proyectos_path %>

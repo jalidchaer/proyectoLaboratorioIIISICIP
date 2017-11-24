@@ -1,0 +1,372 @@
+<script type="text/javascript">
+  
+
+<input id="input-1" type="checkbox">
+<script>
+$('#input-1').checkboxpicker({
+  html: true,
+  offLabel: '<span class="glyphicon glyphicon-remove">',
+  onLabel: '<span class="glyphicon glyphicon-ok">'
+});
+</script>
+
+
+
+<div class="container">
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-lg full-screen" style="max-height:85%;  margin-top: 50px; overflow: auto !important; margin-bottom:50px;">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+         <!-- Modal header-->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Registro de proyecto </h4>
+            
+
+</div>
+
+        <!-- Modal body-->
+        <div class="modal-body">
+          <div class='panel panel-primary dialog-panel'>
+      
+      <div class='panel-body'>
+        <form class='form-horizontal' role='form'>
+
+
+ 
+  
+     
+     <div class="panel panel-primary">
+      <div class="panel-heading"><center>Datos del coresponsable</center></div>
+      <div class="panel-body">
+      
+
+     
+            <div class='form-group'>
+            <div class="container">
+ <label class='control-label col-md-1' for='id_title'>Busca Cedula</label>
+        <div class="col-md-4">
+        
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-md" placeholder="Buscar" />
+                    <span class="input-group-btn">-white
+                        <button class="btn  btn-md" id="azulbrillante" type="button">
+                            <i class="glyphicon glyphicon-search white"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            
+       
+  </div>
+  <div class="col-md-1">
+   <button type="button" class="btn white" id="azulbrillante" >Mostrar Coresponsables <span class="glyphicon glyphicon-user"></span></button>
+    </div>
+  
+</div>
+ 
+
+    </div>
+
+   
+   
+
+
+      <div class='form-group'>
+            <label class='control-label col-md-1' for='id_title'>Nombre:</label>
+            
+              <div class='col-md-3 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_first_name' placeholder='Primer nombre' type='text'>
+                </div>
+              </div>
+
+              <label class='control-label col-md-1 ' for='id_title'>Apellido:</label>
+          
+              <div class='col-md-3 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_last_name' placeholder='Apellido' type='text'>
+                </div>
+              </div>
+
+              <label class='control-label col-md-1 ' for='id_cedula'>Cedula:</label>
+           
+             
+              <div class='col-md-2'>
+                <div class='form-group internal'>
+                  <input class='form-control col-md-8' id='id_cedula' placeholder='cedula' type='text'>
+                </div>
+              </div>
+          </div>
+            
+     
+      
+          
+      
+
+
+         
+            
+            
+          
+          
+          <div class='form-group'>
+            <label class='control-label col-md-2' for='id_licenciado'>Licenciado</label>
+              
+                <div class='col-md-2'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch11" checked onclick="document.getElementById('licenciado1').disabled = !this.checked;">
+                      <label class="onoffswitch-label" for="myonoffswitch11">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_cedula'>Titulo obtenido:</label>
+              
+                <div class='col-md-4'>
+                  <div class='form-group internal'>
+                    <input class='form-control col-md-5' id='licenciado1' placeholder='Titulo obtenido' type='text' disabled="disabled">
+                  </div>
+                </div>
+              
+          </div>
+
+
+          
+          
+
+    
+          
+            
+              
+          
+         
+         
+
+
+       <!-- <div class='form-group'>
+            <div class='control-label col-md-2 col-md-offset-2'>
+                <div class="radio abc-radio abc-radio-primary">
+                   <div class="checkbox abc-checkbox abc-checkbox-info abc-checkbox-circle">
+                        <input id="checkbox9" class="styled" checked="" type="checkbox">
+                        <label for="checkbox9">
+                           Especializacion</label>
+                </div>
+            </div>
+
+          </div>
+          </div>-->
+
+
+           <div class='form-group'>
+            <label class='control-label col-md-2' for='id_especializcion'>Especializcion</label>
+              
+                <div class='col-md-2'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch21" checked onclick="document.getElementById('especializcion1').disabled = !this.checked;">
+                      <label class="onoffswitch-label" for="myonoffswitch21">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_especializcion'>Titulo obtenido:</label>
+              
+                <div class='col-md-4'>
+                  <div class='form-group internal'>
+                    <input class='form-control col-md-5' id='especializcion1' placeholder='Titulo obtenido' type='text' disabled="disabled">
+                  </div>
+                </div>
+              
+          </div>
+          
+
+    
+          
+        <div class='form-group'>
+            <label class='control-label col-md-2' for='id_maestria'>Maestria</label>
+              
+                <div class='col-md-2'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch31" checked onclick="document.getElementById('maestria1').disabled = !this.checked;">
+                      <label class="onoffswitch-label" for="myonoffswitch31">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_maestria1'>Titulo obtenido:</label>
+              
+                <div class='col-md-4'>
+                  <div class='form-group internal'>
+                    <input class='form-control col-md-5' id='maestria1' placeholder='Titulo obtenido' type='text' disabled="disabled">
+                  </div>
+                </div>
+              
+          </div>
+          
+
+    
+          
+     
+       
+          <div class='form-group'>
+            <label class='control-label col-md-2' for='id_maestria'>Doctorado</label>
+              
+                <div class='col-md-2'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch41" checked onclick="document.getElementById('doctorado1').disabled = !this.checked;">
+                      <label class="onoffswitch-label" for="myonoffswitch41">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_maestria'>Titulo obtenido:</label>
+              
+                <div class='col-md-4'>
+                  <div class='form-group internal'>
+                    <input class='form-control col-md-5' id='doctorado1' placeholder='Titulo obtenido' type='text' disabled="disabled">
+                  </div>
+                </div>
+              
+          </div>
+              
+                
+
+         <div class='form-group'>
+            <label class='control-label col-md-2' for='id_maestria'>Otro</label>
+              
+                <div class='col-md-2'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch51" checked onclick="document.getElementById('otro1').disabled = !this.checked;">
+                      <label class="onoffswitch-label" for="myonoffswitch51">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_maestria'>Titulo obtenido:</label>
+              
+                <div class='col-md-4'>
+                  <div class='form-group internal'>
+                    <input class='form-control col-md-5' id='otro1' placeholder='Titulo obtenido' type='text' disabled="disabled">
+                  </div>
+                </div>
+              
+          </div>
+          
+
+          <div class='form-group'>
+                    <label class='control-label col-md-2' for='id_especialidad'>Especialidad</label>
+                    
+                     
+                      <div class='col-md-5'>
+                        <div class='form-group internal'>
+                          <input class='form-control col-md-5' id='id_especialidad' placeholder='Especialidad' type='text'>
+                        </div>
+                      </div>
+                        <label class='control-label col-md-1' for='id_categoria'>Categoria</label>
+                      <div class='col-md-2'>
+                        <div class='form-group internal'>
+                          <select class='form-control' id='id_categoria'>
+                            <option>Agregado</option>
+                            <option>Contratado</option>
+                            <option>otra</option>
+                            <option>otra</option>
+                            <option>otra</option>
+                           
+                          </select>
+                        </div>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class='form-group'>
+                    <label class='control-label col-md-1 ' for='id_condicion'>Condicion</label>
+                     
+                      <div class='col-md-3'>
+                        <div class='form-group internal'>
+                          <select class='form-control' id='id_condicion'>
+                            <option>Ordinario</option>
+                            <option>Dedicacion completa</option>
+                            <option>otra</option>
+                            <option>otra</option>
+                            <option>otra</option>
+                           
+                          </select>
+                        </div>
+                      </div>
+                         <label class='control-label col-md-1' for='id_decanato'>Decanato</label>
+                   
+                      <div class='col-md-2'>
+                        <div class='form-group internal'>
+                          <select class='form-control' id='id_decanato'>
+                            <option>Dcyt</option>
+                            <option>otro</option>
+                            <option>otra</option>
+                            <option>otra</option>
+                            <option>otra</option>
+                           
+                          </select>
+                        </div>
+                      </div>
+                      <label class='control-label col-md-1 ' for='id_dedicacion'>Dedicacion</label>
+                    
+                      <div class='col-md-offset-1 col-md-2 '>
+                        <div class='form-group internal'>
+                          <select class='form-control' id='id_dedicacion'>
+                            <option>Exclusivo</option>
+                            <option>Dedicacion completa</option>
+                            <option>otra</option>
+                            <option>otra</option>
+                            <option>otra</option>
+                           
+                          </select>
+                        </div>
+                      </div>
+                    
+                  </div>
+
+                  
+
+
+                  
+                 
+                  
+               </div>
+        </form>
+      </div>
+    </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" type='submit'>Guardar <span class="glyphicon glyphicon-floppy-disk"></span></button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar <span class="glyphicon glyphicon-remove"></span></button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModal4">siguiente<span class="glyphicon glyphicon-arrow-right"></span></button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+

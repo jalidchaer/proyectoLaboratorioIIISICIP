@@ -1,0 +1,8 @@
+<h1>Datos del Proyecto</h1>
+
+<%= render 'form_show' %>
+
+<%= link_to 'Ver', @proyecto %> |
+<%= link_to 'Volver', proyectos_path %>
+<td><%= button_to 'Descargar', @proyecto, method: :get %></td>
+<td><%= button_to 'Eliminar', @proyecto, method: :delete, data: { confirm: 'Estas seguro?' } %>

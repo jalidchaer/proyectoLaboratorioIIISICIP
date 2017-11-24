@@ -1,0 +1,65 @@
+
+
+   <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+
+<td> <%= link_to 'Volver', url_for(:back) %></td>
+ <table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+  
+    <th>Id investigador (cambiar por cedula)</th>
+  
+    <th> Id Proyecto </th>
+   
+    <th> Codigo Proyecto </th>
+   
+    <th>Fecha de creacion</th>
+    
+    <th>Nombre de la planilla</th>
+    <th colspan="2"></th>
+    
+  </tr>
+
+<%  @proyectos.each do | proyecto| %>
+  <tr>
+    <td><%=  proyecto.investigador_id %> </td>
+   
+    <td><center><%= proyecto.id %></center> </td>
+  
+    <td><center><%= proyecto.codigo %></center> </td>
+  
+    <td><%= proyecto.created_at %>| </td>
+    
+    <td><%= proyecto.plantilla_file_name %></td>
+    
+
+
+
+   
+   
+
+   
+    <td> <%= link_to 'Volver', url_for(:back) %></td>
+    
+   
+    <td><%= link_to 'Ver', controller: "investigador", action: "show", id: proyecto  %></td>
+
+    <td> <%= link_to 'Ver Plantilla Proyecto No Subvencionado:', proyecto.plantilla.url, { target: '_blank'} %></td>
+      
+        <td><%= button_to 'Eliminar', proyecto, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+    
+    
+    
+  
+
+  </tr>
+<% end %>
+</table>
+
+
+
+</section>
+</section>
+

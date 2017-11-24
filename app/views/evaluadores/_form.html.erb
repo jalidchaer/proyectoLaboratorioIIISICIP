@@ -1,0 +1,49 @@
+<%= form_for(@evaluadore) do |f| %>
+  <% if @evaluadore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluadore.errors.count, "error") %> prohibited this evaluadore from being saved:</h2>
+
+      <ul>
+      <% @evaluadore.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cedula %><br>
+    <%= f.text_field :cedula %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :cedula %><br>
+    <%= f.text_field :cedula %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :especializacion %><br>
+    <%= f.text_field :especializacion %>
+  </div>
+  <div class="field">
+    <%= f.label :maestria %><br>
+    <%= f.check_box :maestria %>
+  </div>
+  <div class="field">
+    <%= f.label :doctorado %><br>
+    <%= f.check_box :doctorado %>
+  </div>
+  <div class="field">
+    <%= f.label :universidad %><br>
+    <%= f.text_field :universidad %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

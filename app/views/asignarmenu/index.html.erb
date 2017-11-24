@@ -1,0 +1,509 @@
+ <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+   <link rel="stylesheet" href="css/checkboxok.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+  <!--<link rel="stylesheet" href="css/bootstrap-switch.min.css">-->
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/checkbox.css">
+  <!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+  <link rel="stylesheet" href="css/bootstrap-iso.css">
+  <link rel="stylesheet" href="css/build.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/busqueda.css">
+  <link rel="stylesheet" href="css/switch.css">
+  <link rel="stylesheet" href="css/bootstrap-toggle.min.css" >
+  <!--swich http://www.jque.re/plugins/version3/bootstrap.switch/    http://www.bootstrap-switch.org/options.html-->
+<!--este cambia el tamaño del modal-->
+  <!--<link href="docs/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="docs/css/highlight.css" rel="stylesheet">
+   <!-- <link href="dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">-->
+    <link href="css/docs.min.css" rel="stylesheet">
+    <link href="docs/css/main.css" rel="stylesheet">
+  
+  <!--Font asil2808 Awesome (added because you use icons in your prepend/append)-->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ <script src="js/main.js"></script>
+  <script src="js/highlight.js"></script>
+
+  <script src="ckeditor.js"></script>
+  <script src="samples/js/sample.js"></script>
+  <script src="js/checkboxok.js"></script>
+  
+  <script src="js/bootstrap-toggle.min.js"></script>
+ <% content_for :head do %>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('input:checkbox').bootstrapSwitch();
+  });
+  </script>
+<% end %>
+
+
+
+
+      
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    
+    
+   	
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+
+  
+<div class="container-fluid text-center ">    
+  <div class="row content">
+   
+    <div class="col-md-2"  > 
+      <div class="container">
+
+  <div  class="panel panel-primary " >
+    <div class="panel-heading"><h3 style="color:white;"><center>Elija un rol y luego marque las opciones que desee activar</center></h3></div>
+    <div class="panel-body">
+    	<form class='form-horizontal' role='form'>
+        <label class='control-label col-md-5 ' for='id_dedicacion'>Seleccione el rol</label>
+                    <div class='form-group'>
+                      <div class='col-md-offset-1 col-md-2 '>
+                        <div class='form-group internal'>
+                          <select class='form-control' id='id_dedicacion'>
+                            <option>Investigador</option>
+                            <option>Evaluador</option>
+                            <option>Coordinador</option>
+                            <option>CDCHT</option>
+                            
+                           
+                          </select>
+                        </div>
+                      </div>
+                      </div>
+
+
+
+                      <div class='form-group'>
+            <label class='control-label col-md-2' for='id_licenciado'>Registro de Proyectos</label>
+              
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch111" >
+                      <label class="onoffswitch-label" for="myonoffswitch111">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+				<label class='control-label col-md-2' for='id_licenciado'>Reformular Proyecto</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch112" >
+                      <label class="onoffswitch-label" for="myonoffswitch112">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_licenciado'>Registrar Informe</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch113" >
+                      <label class="onoffswitch-label" for="myonoffswitch113">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_licenciado'>Estado del proyecto</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch115" >
+                      <label class="onoffswitch-label" for="myonoffswitch115">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_licenciado'>Historial del Proyecto </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch114" >
+                      <label class="onoffswitch-label" for="myonoffswitch114">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_licenciado'>Reformular Proyecto </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch116" >
+                      <label class="onoffswitch-label" for="myonoffswitch116">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'> Estado del Proyecto </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch117" >
+                      <label class="onoffswitch-label" for="myonoffswitch117">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'> Estado del Proyecto </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch118" >
+                      <label class="onoffswitch-label" for="myonoffswitch118">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'> Evaluar Proyectos </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch119" >
+                      <label class="onoffswitch-label" for="myonoffswitch119">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+				<label class='control-label col-md-2' for='id_licenciado'> Consultar Proyectos </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch120" >
+                      <label class="onoffswitch-label" for="myonoffswitch120">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'> Tareas Pendientes </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch121" >
+                      <label class="onoffswitch-label" for="myonoffswitch121">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_licenciado'> Registrar Area de Investigacion </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch122" >
+                      <label class="onoffswitch-label" for="myonoffswitch123">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+<label class='control-label col-md-2' for='id_licenciado'> Registrar tipo de proyecto </label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch123" >
+                      <label class="onoffswitch-label" for="myonoffswitch123">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+			<label class='control-label col-md-2' for='id_licenciado'> Proyecto por Asignar</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch124" >
+                      <label class="onoffswitch-label" for="myonoffswitch124">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+
+			<label class='control-label col-md-2' for='id_licenciado'> Asignar Evaluador</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch125" >
+                      <label class="onoffswitch-label" for="myonoffswitch125">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_licenciado'> Seguimiento de Proyecto</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch126" >
+                      <label class="onoffswitch-label" for="myonoffswitch126">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+               
+                 <label class='control-label col-md-2' for='id_licenciado'>  Programar Tareas Pendientes</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch127" >
+                      <label class="onoffswitch-label" for="myonoffswitch127">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+                <label class='control-label col-md-2' for='id_licenciado'>  Proyectos en Evaluacion</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch128" >
+                      <label class="onoffswitch-label" for="myonoffswitch128">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  Proyectos Avalados</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch129" >
+                      <label class="onoffswitch-label" for="myonoffswitch129">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  Proyectos Avalados Definitivos</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch130" >
+                      <label class="onoffswitch-label" for="myonoffswitch130">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  Proyectos por Departementos</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch131" >
+                      <label class="onoffswitch-label" for="myonoffswitch131">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  Proyectos por Area de Investigacion</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch132" >
+                      <label class="onoffswitch-label" for="myonoffswitch132">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  Credenciales de Proyectos</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch133" >
+                      <label class="onoffswitch-label" for="myonoffswitch133">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  Apertura de Inscripcion de Proyectos</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch134" >
+                      <label class="onoffswitch-label" for="myonoffswitch134">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  AperGestionar Proroga de Proyectos</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch135" >
+                      <label class="onoffswitch-label" for="myonoffswitch135">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  Gestionar Renovacion de Proyectos</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch136" >
+                      <label class="onoffswitch-label" for="myonoffswitch136">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                 <label class='control-label col-md-2' for='id_licenciado'>  Culminar Proyecto</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch137" >
+                      <label class="onoffswitch-label" for="myonoffswitch137">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+
+                <label class='control-label col-md-2' for='id_licenciado'>  CAvalar Proyecto</label>
+                <div class='col-md-1'>
+                  <div class='form-group internal'>
+                       <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch138" >
+                      <label class="onoffswitch-label" for="myonoffswitch138">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                     </div>
+                  </div>
+                </div>
+              
+          </div>
+                
+        </form>
+    </div>
+    <div class="panel-footer">
+    <button type="button" class="btn btn-primary" type='submit'>Guardar <span class="glyphicon glyphicon-floppy-disk"></span></button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar <span class="glyphicon glyphicon-remove"></span></button>
+           <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModal2">Volver al menu<span class="glyphicon glyphicon-arrow-left"></span></button>
+    </div>
+  </div>
+</div>
+    </div>
+    							
+
+
+
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
+<div class='panel panel-primary dialog-panel'>
+     
+      <div class='panel-body'>
+        
+      </div>
+</div>
+ 
+

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+   <link rel="stylesheet" href="css/checkboxok.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+  <!--<link rel="stylesheet" href="css/bootstrap-switch.min.css">-->
+
+  <!--menu vertical -->
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+        <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
+
+  <!--menu-->
+  
+  <!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+  <link rel="stylesheet" href="css/bootstrap-iso.css">
+  <link rel="stylesheet" href="css/build.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/busqueda.css">
+  <link rel="stylesheet" href="css/switch.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <!--swich http://www.jque.re/plugins/version3/bootstrap.switch/    http://www.bootstrap-switch.org/options.html-->
+<!--este cambia el tamaño del modal-->
+  <!--<link href="docs/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="docs/css/highlight.css" rel="stylesheet">
+   <!-- <link href="dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">-->
+    <link href="css/docs.min.css" rel="stylesheet">
+    <link href="docs/css/main.css" rel="stylesheet">
+  
+  <!--Font asil2808 Awesome (added because you use icons in your prepend/append)-->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ <script src="js/main.js"></script>
+  <script src="js/highlight.js"></script>
+
+  <!-- menu de text area :D con selector elijo a q elemento se lo aplicare -->
+   <script src="js/tinymce/js/tinymce/tinymce.min.js"></script>
+   <script src="js/tinymce/js/tinymce/langs/es.js"></script>
+  <script>tinymce.init({ selector:'.textarea' });</script>
+  <div class="container">
+  <!--hasta aqui -->
+            
+  
+  <script src="js/bootstrap-toggle.min.js"></script>
+ <% content_for :head do %>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('input:checkbox').bootstrapSwitch();
+  });
+  </script>
+<% end %>
+  
+
+  <!--<script src="https://code.jquery.com/jquery-2.2.3.min.js" defer></script>
+  <script src="dist/js/bootstrap-checkbox.min.js" defer></script>-->
+ 
+<script>
+$(':checkbox').checkboxpicker();
+  $('#idTourDateDetails').datepicker({
+     dateFormat: 'dd-mm-yy',
+     minDate: '+5d',
+     changeMonth: true,
+     changeYear: true,
+     altField: "#idTourDateDetailsHidden",
+     altFormat: "yy-mm-dd"
+ });
+
+  
+
+$('form').submit(function(){
+  alert($(this["options"]).val());
+    return false;
+});
+
+$("[name='my-checkbox']").bootstrapSwitch();
+$('#idTourDateDetails').datepicker({
+     dateFormat: 'dd-mm-yy',
+     minDate: '+5d',
+     changeMonth: true,
+     changeYear: true,
+     altField: "#idTourDateDetailsHidden",
+     altFormat: "yy-mm-dd"
+ });
+</script>
+
+
+
+</head>
+<body>
+
+<%= render partial: "modal/registroproyecto" %>
+<%= render partial: "modal/antecedentes_del_problema" %>
+   <%= render partial: "modal/datosresponsable" %>
+   <%= render partial: "modal/datoscoresponsable" %>
+    <%= render partial: "modal/resumenproyecto" %>
+    <%= render partial: "modal/planteamiento_del_problema" %>
+     <%= render partial: "modal/objetivos" %>
+      <%= render partial: "modal/formulacion_del_proyecto" %>
+
+
+
+
+
+
+
+<div class="container">
+<div class="panel-body">
+  <h3>Registro de proyecto</h3>
+  <div class="row">
+  
+    <div class="col-md-5">
+   <!--   <ul class="nav nav-tabs">
+    <div class="nav nav-head">Submenu</div>
+    <li ><a data-dismiss="modal" data-toggle="modal" href="#myModal">Datos del proyecto</a></li>
+    <li><a data-dismiss="modal" data-toggle="modal" href="#myModal2">Datos del Responsable o Tutor</a></li>
+    <li><a data-dismiss="modal" data-toggle="modal" href="#myModal3">Datos del Coresponsable </a></li>
+    <li><a data-dismiss="modal" data-toggle="modal" href="#myModal4">Resumen del proyecto</a></li>
+     <li><a data-dismiss="modal" data-toggle="modal" href="#myModal5">Antecedentes del problema</a></li>
+     <li><a data-dismiss="modal" data-toggle="modal" href="#myModal6">Planteamiento del problema</a></li>
+     <li><a data-dismiss="modal" data-toggle="modal" href="#myModal7">Objetivos</a></li>
+      <li><a data-dismiss="modal" data-toggle="modal" href="#myModal8">Formulacion del proyecto</a></li>
+
+</ul>-->
+
+<ul class="ca-menu">
+                   <li><h3>SubMenu de Proyectos</h3></li>
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal">
+                            <span class="ca-icon">1</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Datos del proyecto</h2>
+                               <!-- <h3 class="ca-sub">Advanced use of technology</h3>-->
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal2">
+                            <span class="ca-icon">2</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Datos del Responsable o Tutor</h2>
+                               
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal3">
+                            <span class="ca-icon">3</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Datos del Coresponsable </h2>
+                              
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal4">
+                            <span class="ca-icon">4</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Resumen del proyecto</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal5">
+                            <span class="ca-icon">5</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Antecedentes del problema</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal6">
+                            <span class="ca-icon">6</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Planteamiento del problema</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal7">
+                            <span class="ca-icon">7</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Objetivos</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal8">
+                            <span class="ca-icon">8</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Formulacion </h2>
+                                <h3 class="ca-sub">Aceptar contrato</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+    </div>
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Incluya hojas de estilos propios -->
+<link rel="stylesheet" type="text/css" href="css/micss.css">
+
+ <h1></h1>
+ 
+ <div id="tree_el"></div>
+
+
+
+
+
+
+
+
+
+
+<script src="docs/js/jquery.min.js"></script>
+    <script src="docs/js/bootstrap.min.js"></script>
+    <script src="docs/js/highlight.js"></script>
+     <script src="js/checkbox.js"></script>
+     <script src="js/fecha.js"></script>
+    <!--<script src="dist/js/bootstrap-switch.js"></script>-->
+    <script src="docs/js/main.js"></script>
+</body>
+
+
+
+                <footer id="footer" class="grid-block">
+    
+                    <a id="totop-scroller" href="#page"></a>
+              
+          <div class="module   deepest">
+
+      <ul class="menu menu-line"><li class="level1 item622"><a href="http://www.ucla.edu.ve/" class="level1"><span>UCLA</span></a></li><li class="level1 item110"><a href="/index.php/carreras" class="level1"><span>Pregrado</span></a></li><li class="level1 item325"><a href="http://dcyt.ucla.edu.ve/postgrado/" target="_blank" class="level1"><span>Postgrado</span></a></li><li class="level1 item327"><a href="/index.php/cursos-mtb" class="level1"><span>Cursos y Diplomados</span></a></li></ul>   
+</div>
+<div class="module   deepest">
+
+      
+<p>Desarrollado por Jose Liscano Jaled Chaer Jesus kahwati y Erika Almeida 2016 Derechos Reservados</p>   
+</div>    
+        </footer>
+</html>

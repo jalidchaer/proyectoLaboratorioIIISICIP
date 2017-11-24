@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+
+    <link href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css' rel='stylesheet' type='text/css'>
+  <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.8/css/bootstrap-switch.css' rel='stylesheet' type='text/css'>
+  <link href='http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css' rel='stylesheet' type='text/css'>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.8/js/bootstrap-switch.min.js' type='text/javascript'></script>
+  <script src='http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js' type='text/javascript'></script>
+   
+   <script type="text/javascript" src="js/catalogo.js"></script>
+   <script type="text/javascript" src="js/calendar.js"></script>
+</head>
+
+
+ 
+
+<body>
+
+
+<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+
+ 
+
+  <div class='container'>
+
+    <div class='panel panel-primary dialog-panel'>
+      <div class='panel-heading'>
+        <h4 ><center>Registro de Evaluadores</center></h4>
+      </div>
+   
+        <form class='form-horizontal' role='form' >
+
+
+ 
+  <div class='form-group'>
+          <center><h4></h4></center>
+          
+           
+          </div>
+
+         
+      
+      
+      <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Nombre:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_first_name' placeholder=' Nombre' type='text'>
+                </div>
+              </div>
+            </div>
+     </div>
+      <div class='form-group'>
+          <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Apellido:</label>
+          <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_last_name' placeholder='Apellido' type='text'>
+                </div>
+              </div>
+          </div>
+      </div>
+
+     
+
+
+         <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_cedula'>Cedula:</label>
+            <div class='col-md-8'>
+             
+              <div class='col-md-8'>
+                <div class='form-group internal'>
+                  <input class='form-control col-md-8' id='id_cedula' placeholder='cedula' type='text'>
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+          <div class='form-group'>
+            <label class='control-label col-md-3 col-md-offset-1' for='id_cedula'>Titulo obtenido:</label>
+              <div class='col-md-8'>
+                <div class='col-md-8'>
+                  <div class='form-group internal'>
+                    <input class='form-control col-md-8' id='id_cedula' placeholder='Titulo obtenido' type='text'>
+                  </div>
+                </div>
+              </div>
+          </div>
+         
+
+      
+      <div class='form-group'>
+          <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Especializacion:</label>
+          <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_last_name' placeholder='Especializacion' type='text'>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class='form-group'>
+          <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Maestria:</label>
+          <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                <input id="checkbox8" class="styled" checked="" type="checkbox">
+                  <input class='form-control' id='id_last_name' placeholder='Especializacion' type='text'>
+
+                </div>
+              </div>
+          </div>
+      </div>
+
+
+<div class='form-group'>
+          <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Doctorado:</label>
+          <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                <div class="">
+                <input id="checkbox8" class="styled" checked="" type="checkbox">
+                  <input class='form-control' id='id_last_name' placeholder='Especializacion' type='text'>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+          
+
+            
+     
+        
+   
+
+          <div class='form-group'>
+            <label class='control-label col-md-3 col-md-offset-1' for='id_cedula'>Universidad:</label>
+              <div class='col-md-8'>
+                <div class='col-md-8'>
+                  <div class='form-group internal'>
+                    <input class='form-control col-md-8' id='id_cedula' placeholder='Universidad donde pertenece' type='text'>
+                  </div>
+                </div>
+              </div>
+          </div> 
+         
+
+        
+         
+
+         <div class='form-group'>
+          
+            <div class='col-md-5 col-md-offset-4' >
+              <button type="button" class="btn btn-primary" type='submit'>Guardar <span class="glyphicon glyphicon-floppy-disk"></span></button>
+           
+               <button type="button" class="btn btn-primary" type='submit'>Enviar <span class="glyphicon glyphicon-envelope"></span></button>
+            
+          </div>
+         
+         
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+    
+        <script src="js/index.js"></script>
+
+  
+</html>

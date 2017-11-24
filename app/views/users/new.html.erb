@@ -1,0 +1,91 @@
+
+<h1><center>Registrar Usuarios</center></h1>
+
+
+
+
+
+
+
+<%= form_for :user, :url=> { :action => :create } do |f| %>
+
+<div class="container">
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="usuario">Nombre</label>  
+  <div class="col-md-5">
+ 
+   <%= f.text_field :nombre ,class:"form-control input-md", required:"", placeholder:"nombre" %> 
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="usuario">Apellido</label>  
+  <div class="col-md-5">
+   <%= f.text_field :apellido ,class:"form-control input-md", required:"", placeholder:"apellido" %> 
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="usuario">Correo</label>  
+  <div class="col-md-5">
+  
+    <%=  f.text_field :correo ,class:"form-control input-md", required:"", placeholder:"correo" %> 
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="usuario">Contraseña</label>  
+  <div class="col-md-5">
+  <%= f.password_field :password ,class:"form-control input-md", required:"", placeholder:"contraseña"%>
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="usuario">Repita la Contraseña</label>  
+  <div class="col-md-5">
+  <%= f.password_field :password_confirmation ,class:"form-control input-md", required:"", placeholder:"repita la contraseña"%>
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="usuario">Rol</label>
+  <div class="col-md-5">
+    <%= f.select :rol, options_for_select([["Investigador", "1"], ["Evaluador", "2"],["Coordinador", "3"], ["CDCHT", "4"], ["Administrador", "5"]]) ,class:"form-control" %>
+  </div>
+</div>
+
+
+
+
+</br>
+</br>
+</br>
+
+<!--<div class="form-group">-->
+
+  <label class="col-md-4 control-label" for="registrar"></label>
+  <div class="form-group">
+          <div class="col-sm-offset-5 col-md-5">
+          <%= f.submit "Registrar" ,class:"btn btn-primary"%>
+           <%= button_tag "Cancelar", type: :reset ,class:"btn btn-primary"%>
+           <%= link_to 'Volver', url_for(:back) ,class:"btn btn-primary"%>
+           
+          </div>
+        </div>
+
+<% end %>

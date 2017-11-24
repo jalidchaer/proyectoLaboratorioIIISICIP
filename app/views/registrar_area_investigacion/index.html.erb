@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html >
+  <head>
+  <link rel="stylesheet" href="css/bootstrap-iso.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+
+
+   
+  
+</head>
+
+  
+ 
+
+<body>
+
+
+<script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+
+
+
+<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+
+   
+
+  <div class='container'>
+
+    <div class='panel panel-primary dialog-panel'>
+      <div class='panel-heading'>
+        <h5 ><center>Registrar Área de Investigación</center></h5>
+      </div>
+      <div class='panel-body'>
+        <form class='form-horizontal' role='form' >
+    <div class="row clearfix">
+    <div class="col-md-12 column">
+      <table class="table table-bordered table-hover" id="tab_logic">
+        <thead>
+          <tr >
+            <th class="text-center">
+              #
+            </th>
+            <th class="text-center">
+              Descripción
+            </th>
+            <th class="text-center">
+              Registrado por
+            </th>
+            <th class="text-center">
+              Fecha
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id='addr0'>
+            <td>
+            1
+            </td>
+            <td>
+            <input type="text" descripcion='descripcion0'  placeholder='Descripcion' class="form-control"/>
+            </td>
+            <td>
+            <input type="text" autor='autor0' placeholder='Autor' class="form-control"/>
+            </td>
+            <td>
+            <input type="text" fecha='fecha' placeholder='fecha' class="form-control"/>
+            </td>
+          </tr>
+                    <tr id='addr1'></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <a id="add_row" class="btn btn-primary"> <span class="glyphicon glyphicon-floppy-disk">Guardar</a>
+  <a  class="btn btn-primary"> <span class="glyphicon glyphicon-floppy-disk">Salir</a>
+
+</div>
+  
+ 
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+    
+        <script src="js/index.js"></script>
+
+        <script>
+           $(document).ready(function(){
+      var i=1;
+     $("#add_row").click(function(){
+      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='descripcion"+i+"' type='text' placeholder='Descripcion' class='form-control input-md'  /> </td><td><input  name='autor0"+i+"' type='text' placeholder='Autor'  class='form-control input-md'></td><td><input  name='fecha"+i+"' type='text' placeholder='Fecha'  class='form-control input-md'></td>");
+
+      $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+      i++; 
+  });
+     $("#delete_row").click(function(){
+       if(i>1){
+     $("#addr"+(i-1)).html('');
+     i--;
+     }
+   });
+
+});
+        </script>
+
+  
+</html>

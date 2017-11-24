@@ -1,0 +1,141 @@
+
+ <%= form_for(@proyecto) do |f| %>
+<div class='container'>
+
+        <h4 ><center>Datos del Proyecto</center></h4>
+      </div>
+
+  <form class='form-horizontal' role='form' >
+
+    
+
+         
+  
+
+     <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Codigo:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+    <%= f.text_field :codigo ,class:"form-control",:readonly => true ,:value => @proyecto.codigo%>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+     <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Titulo del Proyecto:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+    <%= f.text_field :titulo ,class:"form-control",:readonly => true ,:value => @proyecto.titulo%>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Investigador Responsable:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <%= f.text_field :responsable ,class:"form-control",:readonly => true ,:value => @proyecto.responsable %>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Departamento:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='departamento' type='text' placeholder='Sistemas' disabled>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>
+            Decanato:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_first_name' type='text' placeholder='Ciencias y Tecnologia' disabled>
+                </div>
+              </div>
+            </div>
+     </div>
+
+          <div class='form-group'>
+            <div class='col-md-9' >
+                <div class='form-group internal'>
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Catalogo de Evaluadores</button>
+                 <div id="demo" class="collapse">
+                 <table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="60%">
+ 
+   <thead>
+    
+      <th>Seleccionar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= f.collection_check_boxes :evaluadore_ids, Evaluadore.all, :id, :cedula do |b| %>
+        <td><%=  b.label %></td>
+        <td><%=  b.check_box %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+
+<br>
+                 
+          <div class="actions">
+    <%= f.submit %>
+  </div>
+ 
+<script>
+$(document).ready(function() {
+    $('#myTable').DataTable();
+} );
+
+$(document).ready(function() {
+    var table = $('#myTable').DataTable();
+ 
+    $('#myTable tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+</script>
+                </div>
+                </div>
+            </div>
+            </div>
+
+
+
+   
+  </form>
+<% end %>   

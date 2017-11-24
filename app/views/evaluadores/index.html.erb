@@ -1,0 +1,68 @@
+ <link href="css/bootstrap.min.css" rel="stylesheet">   
+<link rel="stylesheet" 
+href="css/jquery.dataTables.min.css"></style>
+<script type="text/javascript" 
+src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" 
+src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+</script>
+<p id="notice"><%= notice %></p>
+
+<h1>Catálogo de Evaluadores</h1>
+
+<table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Cedula</th>
+      <th>Apellido</th>
+      <th>Cedula</th>
+      <th>Titulo</th>
+      <th>Especializacion</th>
+      <th>Universidad</th>
+      <th>Ver perfil</th>
+      <th>Seleccionar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evaluadores.each do |evaluadore| %>
+      <tr>
+        <td><%= evaluadore.cedula %></td>
+        <td><%= evaluadore.apellido %></td>
+        <td><%= evaluadore.cedula %></td>
+        <td><%= evaluadore.titulo %></td>
+        <td><%= evaluadore.especializacion %></td>
+        <td><%= evaluadore.universidad %></td>
+        <td><%= link_to 'Show', evaluadore %></td>
+        <td> <input id="checkbox11" class="styled" checked="false" type="checkbox"></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<script>
+$(document).ready(function() {
+    $('#myTable').DataTable();
+} );
+
+$(document).ready(function() {
+    var table = $('#myTable').DataTable();
+ 
+    $('#myTable tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+</script>
+

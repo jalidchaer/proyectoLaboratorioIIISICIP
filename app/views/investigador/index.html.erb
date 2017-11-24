@@ -1,0 +1,152 @@
+<ul class="ca-menu">
+                   <li><h3>SubMenu de Proyectos</h3></li>
+                    <li>
+                    <%= link_to 'Registrar Proyecto', controller: "investigador", action: "registrar_proyecto" %>
+                        <a  href="/investigador/registrar_proyecto">
+                            <span class="ca-icon">1</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Datos del proyecto</h2>
+                               <!-- <h3 class="ca-sub">Advanced use of technology</h3>-->
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal2">
+                            <span class="ca-icon">2</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Datos del Responsable o Tutor</h2>
+                               
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal3">
+                            <span class="ca-icon">3</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Datos del Coresponsable </h2>
+                              
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal4">
+                            <span class="ca-icon">4</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Resumen del proyecto</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal5">
+                            <span class="ca-icon">5</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Antecedentes del problema</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal6">
+                            <span class="ca-icon">6</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Planteamiento del problema</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal7">
+                            <span class="ca-icon">7</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Objetivos</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-dismiss="modal" data-toggle="modal" href="#myModal8">
+                            <span class="ca-icon">8</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Formulacion </h2>
+                                <h3 class="ca-sub">Aceptar contrato</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">   
+<link rel="stylesheet" href="css/jquery.dataTables.min.css"></style>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+</script>
+<p id="notice"><%= notice %></p>
+<h2>Listado de Proyectos</h2>
+<br>
+
+<table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Codigo</th>
+      <th>Responsable</th>
+      <th>Titulo</th>
+      <th>Duracion</th>
+      <th>Estado</th>
+      <th>ver proyecto</th>
+      <th>Cerrar proyecto</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proyectos.each do |proyecto| %>
+      <tr>
+        <td><%= proyecto.fecha %></td>
+        <td><%= proyecto.codigo %></td>
+        <td><%= proyecto.responsable %></td>
+        <td><%= proyecto.titulo %></td>
+        <td><%= proyecto.duracion %></td>
+        <td><%= proyecto.estado %></td>
+        <td> <td><%= button_to 'Descargar', proyecto, method: :get %></td>
+        <td><%= button_to 'Eliminar', proyecto, method: :delete, data: { confirm: 'Estas seguro?' } %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'New Proyecto', new_proyecto_path %>
+
+<script>
+$(document).ready(function() {
+    $('#myTable').DataTable();
+} );
+
+$(document).ready(function() {
+    var table = $('#myTable').DataTable();
+ 
+    $('#myTable tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+ 
+    $('#button').click( function () {
+        table.row('.selected').remove().draw( false );
+    } );
+} );
+</script>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cedula: MyString
+  apellido: MyString
+  cedula: MyString
+  titulo: MyString
+  especializacion: MyString
+  maestria: false
+  doctorado: false
+  universidad: MyString
+
+two:
+  cedula: MyString
+  apellido: MyString
+  cedula: MyString
+  titulo: MyString
+  especializacion: MyString
+  maestria: false
+  doctorado: false
+  universidad: MyString

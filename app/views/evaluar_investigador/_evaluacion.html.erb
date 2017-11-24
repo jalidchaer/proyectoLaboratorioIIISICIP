@@ -1,0 +1,278 @@
+
+ <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <script src="assets/jquery.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+
+
+  <div class='container'>
+ <div class='panel panel-primary dialog-panel'>
+      <div class='panel-heading'>
+        <h4 ><center>Datos del Proyecto</center></h4>
+      </div>
+
+  <form class='form-horizontal' role='form' >
+   <%= form_for(@proyecto) do |f| %>
+ 
+         
+  <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>fecha:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+          <%= f.text_field :fecha ,class:"form-control",:readonly => true ,:value => @proyecto.fecha%>
+                </div>
+              </div>
+            </div>
+     </div>
+
+     <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Codigo:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+    <%= f.text_field :codigo ,class:"form-control",:readonly => true ,:value => @proyecto.codigo%>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+     <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Titulo del Proyecto:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+    <%= f.text_field :titulo ,class:"form-control",:readonly => true ,:value => @proyecto.titulo%>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Investigador Responsable:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <%= f.text_field :responsable ,class:"form-control",:readonly => true ,:value => @proyecto.responsable %>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Departamento:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='departamento' type='text' placeholder='Sistemas' disabled>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+           <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>
+            Decanato:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' id='id_first_name' type='text' placeholder='Ciencias y Tecnologia' disabled>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+
+   
+  </form>
+</div>
+
+     </div>
+
+<%=session[:id] = @proyecto.id%>
+ 
+ <%= form_for :evaluacion, :url=> { :controller => 'evaluar_investigador',:action => :evaluacion  }  do |b| %>
+
+ <div class='container'>
+
+
+    <div class='panel panel-primary dialog-panel'>
+      <div class='panel-heading'>
+        <h4 ><center>Evaluacion del Proyecto:</center></h4>
+      </div>
+   
+        <form class='form-horizontal' role='form' >
+        <div class='form-group'>
+          <center><h4></h4></center>
+          </div>
+
+  <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>Id:</label>
+            <div class='col-md-8'>
+              <div class='col-md-8 indent-small'>
+                <div class='form-group internal'>
+    <%= b.number_field :proyecto_id ,class:"form-control",:required => true ,:value => @proyecto.id ,:visible => false%>
+                </div>
+              </div>
+            </div>
+     </div>
+
+
+
+  <div class="form-group">
+    <label for="pregunta1">1) Emita su opinion acerca del interes cientifico y nivel de originalidad de las ideas planteadas en el proyecto:</label>
+    <div class="col-md-11">
+  <%= b.text_area :resp1 ,class:"form-control" ,:required => true%>
+  </div>
+  </div>
+  
+
+
+
+
+<div class='container'>
+ 
+  <div class="form-group">
+  <div class="col-md-11">
+    <label for="pregunta2">2) Emita su opinion  sobre las hipotesis emitidas por el investigador, indicando si relaciona las variables con los objetivos planteados:</label>
+  <%= b.text_area :resp2 ,class:"form-control" ,:required => true%>
+  </div>
+  </div>
+  </div>
+
+
+
+ <div class='container'>
+  <div class="form-group">
+   <div class="col-md-11">
+    <label for="pregunta3">3) Acerca de la metodologia de investigacion formulada, considere la rigurosidad cientifica, la novedad de las tecnicas propuestas y su adecuacion a los objetivos planteados:</label>
+  <%= b.text_area :resp3 ,class:"form-control" ,:required => true%>
+  </div>
+  </div>
+  </div>
+  
+
+
+    <div class='container'>
+  <div class="form-group">
+    <label for="pregunta4">4) Opine brevemente sobre la viabilidady factibilidad del proyecto y el grado de la planificacion del mismo:</label>
+     <div class="col-md-11">
+ <%= b.text_area :resp4 ,class:"form-control" ,:required => true%>
+  </div>
+  </div>
+  </div>
+
+
+
+<div class='container'>
+  <div class="form-group">
+    <label for="pregunta5">5) En caso de ser un proyecto de tipo A emita su opinion sobre la multidiciplinareidad del mismo:</label>
+     <div class="col-md-11">
+  <%= b.text_area :resp5 ,class:"form-control" ,:required => true%>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+<div class='container'>
+  <div class="form-group">
+    <label for="pregunta6">6) Emita opinion sobre los productos esperados, su impacto y pertinencia:</label>
+     <div class="col-md-11">
+ <%= b.text_area :resp6 ,class:"form-control" ,:required => true%>
+  </div>
+  </div>
+  </div>
+
+
+<div class='container'>
+  <div class="form-group">
+   <div class="col-md-11">
+    <label for="pregunta7">7) Cual es su opinion acerca de la adecuacion de recursos solicitados y disponibles, en relacion a objetivos planteados y viabilidad del proyecto formulado:</label>
+    
+  <%= b.text_area :resp7 ,class:"form-control" ,:required => true%>
+  </div>
+  </div>
+  </div>
+
+
+
+
+<div class='container'>
+ <form role="form">
+  <div class="form-group">
+  <div class="col-md-11">
+    <label for="pregunta8">8) Cual es su opinion acerca del responsable del proyecto de investigación y sus colaboradores (opine acerca de la idoneidad cientifica para ejecutar el proyecto, capacidad de gestion, relacion de su especialidad con los objetivos planteados , composicion multidisciplinaria de los colaboradores, afinidad cientifica de los participantes y consolidacion del equipo en el proyecto):</label>
+   <%= b.text_area :resp8 ,class:"form-control" ,:required => true%>
+  </div>
+  </div>
+</div>
+
+<div class='container'>
+ <div class="form-group">
+    <label for="pregunta9">9) En funcion del analisis realizado por usted al proyecto presentado,sirvase emitir un juicio sobre la aprobacion o no del mismo:</label>
+     <div class="col-md-11">
+   <%= b.text_area :resp9 ,class:"form-control" ,:required => true%>
+    </div>
+  </div>
+  </div>
+
+  <div class='container'>
+ 
+  <div class="form-group">
+    <label for="pregunta10">10) Recomendaciones Generales:</label>
+     <div class="col-md-11">
+  <%= b.text_area :resp10 ,class:"form-control" ,:required => true%>
+   </div>
+  </div>
+  </div>
+
+
+
+                  <div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_conclusion'>Conclusion de Evaluacion:</label>
+                    <div class='col-md-6'>
+                      <div class='col-md-8'>
+                        <div class='form-group internal'>
+                           <%= b.select :conclusion, options_for_select([["Aprobar"], ["Reformulaciones menores en base a las recomencaciones"], ["Reformulaciones mayores en base a las recomencaciones"], ["No aprobar"]]) ,class:"form-control" %>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+
+
+            <div class='form-group'>
+            <div class='col-md-5 col-md-offset-4' >
+               <div class="actions">
+               <%= b.submit %>
+               </div>
+ 
+               <button type="button" class="btn btn-primary" type='submit'>Enviar <span class="glyphicon glyphicon-envelope"></span></button>
+               <button type="button" class="btn btn-primary" type='submit'>Salir <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+
+            
+          </div>
+          </div>
+         
+         <br>
+          
+        </form>
+      
+
+    
+        <script src="js/index.js"></script>
+<% end %>
+
+  <% end %>

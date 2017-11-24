@@ -1,0 +1,296 @@
+
+<script type="text/javascript">
+  $('#myModal4').modal('hide');
+</script>
+
+<div class="container">
+  
+  <!-- Modal -->
+  <div class="modal fade" data-backdrop="static" data-keyboard="false" id="myModal" role="dialog">
+    <div class="modal-dialog  full-screen"  style=" max-height:85%;  margin-top: 50px;  margin-bottom:50px;">
+    
+      <!-- Modal content-->
+      <div class="modal-content " >
+      <!-- Modal header-->
+       <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Registro de proyecto </h4>
+            
+
+        </div>
+
+        <!-- Modal body-->
+        <div class="modal-body">
+          <div class='panel panel-primary dialog-panel'>
+      
+      <div class='panel-body'>
+        <form class='form-horizontal' role='form'>
+
+
+ 
+  
+     
+     <div class="panel panel-primary">
+        <div class="panel-heading"><center>Responsable o tutor</center></div>
+          <div class="panel-body">
+            <div class='form-group'>
+
+         
+            
+                <label class='control-label col-md-1 ' for='id_title'>Nombre:</label>
+               
+                  <div class='col-md-3 indent-small'>
+                    <div class='form-group internal'>
+                      <input class='form-control' id='id_first_name' placeholder='Primer nombre' type='text'>
+                    </div>
+                  </div>
+                
+                
+                <label class='control-label col-md-1 ' for='id_title'>Apellido:</label>
+                  <div class='col-md-3 indent-small'>
+                    <div class='form-group internal'>
+                      <input class='form-control' id='id_last_name' placeholder='Apellido' type='text'>
+                    </div>
+                  </div>
+
+                  <label class='control-label col-md-1 ' for='id_cedula'>Cedula:</label>
+                  <div class='col-md-2 indent-small'>
+                    <div class='form-group internal'>
+                      <input class='form-control' id='id_last_name' placeholder='Cedula' type='text'>
+                    </div>
+                  </div>
+
+              
+            </div>
+   
+        </div>
+    </div>
+
+         
+         
+
+
+        
+          
+        
+     
+        <div class="panel panel-primary">
+          <div class='panel-heading'> <center> Datos del proyecto</center></div>
+              <div class="panel-body">
+                <%= form_for :proyecto, :url=> { :controller => 'proyectos',:action => :create }  do |f| %>
+                  
+                    <div class="form-group ">
+                     
+                        
+                        <label class='control-label col-md-1' for='id_equipment'>Decanato</label>
+                      
+                        <div class='col-md-3'>
+                          <div class='form-group internal'>
+                            <select class='form-control' id='id_equipment'>
+                              <option>Ciencias y Tecnologia</option>
+                              <option>Agroindustrial</option>
+                              <option>Medicina</option>
+                              <option>otro1</option>
+                              <option>Produccion</option>
+                              <option>Veterinaria</option>
+                            </select>
+                          </div>
+                        </div>
+
+                      
+                        <label class='control-label col-md-1' for='id_categoria'>Categoria</label>
+                           <div class='col-sm-1'>
+                             
+                                <div class='form-group internal'>
+                                  <select class='form-control' id='id_equipment'>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                  </select>
+                                </div>
+                              
+                   
+                          </div>
+                      
+                   </div>
+                  
+              
+
+                  
+                   
+                    
+                 
+                  <div class='form-group'>
+
+                     <label class="col-sm-1 control-label" for='id_email'>Codigo</label>
+                    <div class="col-sm-3">
+                     
+                        
+                           <%= f.text_field :codigo ,class:"form-control input-md", required:"", placeholder:"Codigo" %> 
+                        </div>
+                     
+                     
+                    
+                    <label class="col-sm-1 control-label" for='id_email'>Titulo</label>
+                     <div class="col-sm-3">
+                     
+                           <%= f.text_area :titulo ,class:"form-control input-md", required:"", placeholder:"Titulo" %> 
+                      
+                     
+                    </div>
+                    <label class="col-sm-1 control-label" for='id_email'>Objetivo General</label>
+                     <div class="col-sm-3">
+                      
+                           <%= f.text_area :objetivogeneral ,class:"form-control input-md", required:"", placeholder:"Objetivo General" %> 
+                       
+                     
+                    </div>
+
+                    </div>
+                    <label class='control-label col-md-2' for='id_departamento'>Departamentos</label>
+                    
+                      
+                        <div class='form-group internal col-md-4 col-md-'>
+                          <select class='form-control' id='id_equipment'>
+                            <option>Investigacion de Operaciones</option>
+                            <option>Matematicas</option>
+                            <option>Departamento1</option>
+                            <option>Departamento2</option>
+                            <option>Departamento3</option>
+                            <option>Departamento4</option>
+                          </select>
+                        </div>
+                      
+                  
+                  </div>
+                  
+               
+                 
+                  
+                 
+                 
+                    
+                 
+                  <div class='form-group'>
+                    <label class='control-label col-md-2' for='id_linea'>Linea de investigacion</label>
+                   
+                     
+                      <div class='col-md-4'>
+                        <div class='form-group internal'>
+                          <input class='form-control col-md-8' id='id_linea' placeholder='linea' type='text'>
+                        </div>
+                      </div>
+                  
+                    <label class='control-label col-md-2 ' for='id_unidad'>Unidad de investigacion</label>
+                    
+                      <div class='col-md-3'>
+                        <div class='form-group internal'>
+                          <select class='form-control' id='id_equipment'>
+                            <option>Investigacion de Operaciones</option>
+                            <option>Matematicas</option>
+                            <option>Departamento1</option>
+                            <option>Departamento2</option>
+                            <option>Departamento3</option>
+                            <option>Departamento4</option>
+                          </select>
+                        </div>
+                      </div>
+                    
+                  </div>
+
+                 
+                    
+                  
+
+
+                  <div class='form-group'>
+                    <label class='control-label col-md-2' for='id_unidad'>Duracion estimada</label>
+                   
+                      <div class='col-md-2'>
+                        <div class='form-group internal'>
+                        
+                           <%= f.number_field :duracion ,class:"form-control input-md", required:"" %> 
+                   
+                        </div>
+                      </div>
+                    
+                    <label class='control-label col-md-4' for='id_linea'>Monto total estimado para el proyecto</label>
+                    
+                     
+                      <div class='col-md-3'>
+                        <div class='form-group internal'>
+                          <input class='form-control col-md-8' id='id_linea'  type='number'>
+                        </div>
+                      </div>
+                    
+                  </div>
+                 
+                
+                    
+                  
+                    </div>
+
+                 <div class="modal-footer">
+           <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+          <i class="glyphicon glyphicon-floppy-disk icon-white"></i> Guardar
+          <% end %>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar <span class="glyphicon glyphicon-remove"></span></button>
+           <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModal2">siguiente<span class="glyphicon glyphicon-arrow-right"></span></button>
+        </div>
+
+
+
+
+
+
+<!--</head>
+<body>
+
+<h2>Toggle Switch</h2>
+
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider"></div>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider"></div>
+</label><br><br>
+
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider round"></div>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+-->
+    
+
+          </div>
+       
+      </div>
+    </div>
+        </div>
+        
+         
+        
+      
+      
+    </div>
+    </div>
+  </div>
+  </div>
+ <% end %>
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<%= form_for(@proyecto) do |f| %>
+  
+
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :created_at,:readonly => true %>
+  </div>
+  <div class="form-group">
+  
+  <div class="col-md-4">
+    <%= f.label :codigo %><br>
+    <%= f.text_field :codigo  ,class:"form-control",:readonly => true ,:value => @proyecto.codigo %>
+
+ </div>
+</div>
+    
+
+  <div class="form-group">
+  
+  <div class="col-md-4">
+    <%= f.label :responsable %><br>
+    <%= f.text_field :responsable ,class:"form-control",:readonly => true ,:value => @proyecto.responsable %>
+
+ </div>
+</div>
+  <div class="form-group">
+
+  <div class="col-md-4">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo ,class:"form-control",:readonly => true ,:value => @proyecto.titulo%>
+
+ </div>
+</div>
+  <div class="form-group">
+
+  <div class="col-md-4">
+    <%= f.label :objetivogeneral %><br>
+     <%= f.text_field :objetivogeneral ,class:"form-control",:readonly => true ,:value => @proyecto.objetivogeneral%>
+ </div>
+</div>
+ <div class="form-group">
+
+  <div class="col-md-4">
+    <%= f.label :objetivosespecifo %><br>
+   <%= f.text_field :objetivosespecifo ,class:"form-control",:readonly => true ,:value => @proyecto.objetivosespecifo%>
+  </div>
+</div>
+  <div class="form-group">
+
+  <div class="col-md-4">
+    <%= f.label :resumen %><br>
+    <%= f.text_field :resumen ,class:"form-control",:readonly => true ,:value => @proyecto.resumen%>
+  </div>
+  </div>
+  <div class="form-group">
+
+  <div class="col-md-4">
+    <%= f.label :duracion %><br>
+    <%= f.text_field :duracion ,class:"form-control",:readonly => true ,:value => @proyecto.duracion %>
+  </div>
+  </div>
+   <div class="form-group">
+
+  <div class="col-md-4">
+    <%= f.label :monto %><br>
+    <%= f.text_field :monto ,class:"form-control",:readonly => true ,:value => @proyecto.monto %>
+  </div>
+  </div>
+
+
+ <div class="form-group">
+
+  <div class="col-md-4">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado ,class:"form-control",:readonly => true ,:value => @proyecto.estado %>
+  </div>
+  </div>
+  <div class="actions">
+  
+  </div>
+<% end %>
